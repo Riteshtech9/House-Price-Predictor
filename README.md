@@ -1,53 +1,63 @@
-🏠 House Price Prediction App
-This project is an end-to-end machine learning web app that predicts house prices based on user input. Built with Python, Flask, and Bootstrap, it includes a trained model, a stylish UI, and an optional cloud deployment setup (Render or Hugging Face).
+# 🏠 House Price Prediction App
 
-📌 Features
-Predicts house price based on:
+This is an **end-to-end machine learning web app** that predicts house prices based on input features. Built with **Flask**, styled using **Bootstrap**, and deployable on **Render**, this project includes everything from model training to a working web UI and API.
 
-Overall quality
+---
 
-Living area
+## 🚀 Features
 
-Garage capacity and size
+- Trains a regression model using Random Forest
+- Web form to enter house details and predict the price
+- Styled with responsive Bootstrap dark theme
+- API endpoint for integration (`/predict`)
+- Deploy-ready on Render or Hugging Face
 
-Basement area
+---
 
-Bathrooms
-
-Year built
-
-Fully responsive Bootstrap-based web form
-
-Trained using Random Forest model
-
-Local API with /predict endpoint
-
-Option to deploy to Render or Hugging Face Spaces
-
-📁 Project Structure
-bash
-Copy
-Edit
+## 📁 Project Structure
 house-price-predictor/
-├── app.py                  # Flask app with HTML frontend
-├── train_model.py          # Script to train and save the model
-├── housing.csv             # Training dataset
-├── house_model.pkl         # Trained model file
-├── columns.pkl             # Feature columns file
-├── requirements.txt        # Python dependencies
-├── templates/
-│   └── index.html          # Frontend Bootstrap form
-├── render.yaml             # (Optional) For Render deployment
+├── app.py # Flask application
+├── train_model.py # Trains and saves model
+├── housing.csv # Dataset
+├── house_model.pkl # Trained model
+├── columns.pkl # Feature column list
+├── requirements.txt # Dependencies
+├── render.yaml # Render deployment config
+└── templates/
+└── index.html # Web form UI (Bootstrap)
 
-📦 Requirements
-nginx
-Copy
-Edit
-Flask
-pandas
-scikit-learn
-joblib
-gunicorn
 
-👨‍💻 Author
-Ritesh Biliangadi
+## 📊 Dataset
+
+Use any housing dataset (e.g., Ames Housing) with these columns:
+
+- `OverallQual`
+- `GrLivArea`
+- `GarageCars`
+- `GarageArea`
+- `TotalBsmtSF`
+- `FullBath`
+- `YearBuilt`
+
+---
+
+## ⚙️ Local Setup Instructions
+
+1. Clone the repository
+git clone https://github.com/yourusername/house-price-predictor.git
+cd house-price-predictor
+2. Install dependencies
+pip install -r requirements.txt
+3. Train the model
+python train_model.py
+4. Start the Flask app
+python app.py
+Visit: http://127.0.0.1:5050
+
+🌐 Web Interface Preview
+Users can enter house details and get a price prediction:
+Predicted Price: ₹ 2,19,090.00
+
+
+
+
